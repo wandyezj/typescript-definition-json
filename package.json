@@ -1,0 +1,40 @@
+{
+  "name": "typescript-definition-json",
+  "version": "1.0.0",
+  "description": "Create JSON representation of a Typescript .d.ts file",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "test": "jest",
+    "prettier-check": "./node_modules/.bin/prettier --check src/**/*.ts",
+    "prettier": "./node_modules/.bin/prettier --config .prettierrc --write src/**/*.ts",
+    "clean": "if exist dist (rmdir /s /q dist)",
+    "build": "./node_modules/.bin/tsc",
+    "api-extractor": "./node_modules/.bin/api-extractor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wandyezj/typescript-definition-json.git"
+  },
+  "author": "wandyezj",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/wandyezj/typescript-definition-json/issues"
+  },
+  "homepage": "https://github.com/wandyezj/typescript-definition-json#readme",
+  "dependencies": {
+    "typescript": "3.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "13.1.6",
+    "@microsoft/api-extractor": "7.5.2",
+    "@types/jest": "24.0.18",
+    "jest": "24.9.0",
+    "prettier": "1.18.2",
+    "ts-jest": "24.0.2",
+    "ts-node": "8.5.2"
+  }
+}
